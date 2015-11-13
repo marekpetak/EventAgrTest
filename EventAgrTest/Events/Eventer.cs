@@ -26,28 +26,18 @@ namespace EventAgrTest.Events
 
                 while (true)
                 {
-                    Publish(new MyMessage { Number = number++ });
+                    Handle(new MyMessage { Number = number++ });
 
-                    System.Threading.Thread.Sleep(1000);
+                    System.Threading.Thread.Sleep(10);
                 }
             });
         }
 
-        private void Publish(Message myMessage)
-        {
-            // publish message to client here ...
-            //Clients.All.publishEvent(new MyMessage { Number = number++ });
-
-            string doSomethingHere = "bump ...";
-        }
-
         public void Handle(Message message)
         {
-            // handle message from client here
             if (this.handler != null)
             {
                 handler(message);
-                //do something with message from client
             }
         }
     }

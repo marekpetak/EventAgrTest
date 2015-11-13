@@ -1,5 +1,4 @@
-﻿
-namespace EventAgrTest.Events
+﻿namespace EventAgrTest.Events
 {
     public abstract class Message {}
 

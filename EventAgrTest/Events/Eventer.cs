@@ -37,10 +37,11 @@ namespace EventAgrTest.Events
         {
             // publish message to client here ...
             //Clients.All.publishEvent(new MyMessage { Number = number++ });
-            throw new NotImplementedException();
+
+            string doSomethingHere = "bump ...";
         }
 
-        private void Handle(Message message)
+        public void Handle(Message message)
         {
             // handle message from client here
             if (this.handler != null)

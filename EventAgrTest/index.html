@@ -16,7 +16,13 @@
 
     <h1>{{headerText}}</h1>
 
-    
+    <h3>{{count}}</h3>
+
+    <div>
+        <input type="text" ng-model="message" />
+        <input type="button" ng-click="sendMessage()" value="Send" />
+        {{incommingMessage}}
+    </div>
 
     <script src="Scripts/app.js"></script>
 </body>
